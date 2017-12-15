@@ -1,229 +1,228 @@
-.container.l_round.s_shadow.m_vs.l_p
-  .lander
-    .row
-      .half.vcenter.hom.m_vs
-        div
-          h1#title elkCSS
-          h5 A sickeningly simple and responsive CSS boilerplate.
-      .half.vcenter#logo
-        img.pull-right(src="/elk.svg")
-    .row#github-buttons
-      div.som.tac.m_vs
+.lander
+  .row
+    .half.vcenter.hom.m_vs
+      div
         h1#title elkCSS
         h5 A sickeningly simple and responsive CSS boilerplate.
-      a.github-button(href="https://github.com/twentytwoo/elk-css" data-style="mega" data-count-href="/twentytwoo/elk-css/stargazers" data-count-api="/repos/twentytwoo/elk-css#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star twentytwoo/elk-css on GitHub") Star
-      .s_hs
-      a.github-button(href="https://github.com/twentytwoo/elk-css/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/twentytwoo/elk-css/network" data-count-api="/repos/twentytwoo/elk-css#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork twentytwoo/elk-css on GitHub") Fork
+    .half.vcenter#logo
+      img.pull-right(src="/elk.svg")
+  .row#github-buttons
+    div.som.tac.m_vs
+      h1#title elkCSS
+      h5 A sickeningly simple and responsive CSS boilerplate.
+    a.github-button(href="https://github.com/twentytwoo/elk-css" data-style="mega" data-count-href="/twentytwoo/elk-css/stargazers" data-count-api="/repos/twentytwoo/elk-css#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star twentytwoo/elk-css on GitHub") Star
+    .s_hs
+    a.github-button(href="https://github.com/twentytwoo/elk-css/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/twentytwoo/elk-css/network" data-count-api="/repos/twentytwoo/elk-css#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork twentytwoo/elk-css on GitHub") Fork
 
-    center.m_vs
-      a(href="https://github.com/twentytwoo/elk-css")
-        button.m_vs.m_p Download
-          b  elkCSS
-      br
-      br
-      i.material-icons.l keyboard_arrow_down
-
-  .column
-    .col-12
-      h2 Responsive grid
-      hr
-      p Basic 12 column grid, includes some shorthands such as 
-      code half
-      | , 
-      code third
-      | , 
-      code twothirds
-      |  and 
-      code full
-      |.
-      p The whole thing has 3 breakpoints, desktop, laptop and mobile.
-      .m_vs
-        script(src="https://gist.github.com/twentytwoo/ddba61c9c798550e67fbf8f1e7486717.js")
-      p Read more about how elk handles responsive design in the "Mobile First" section.
-
-  .grid-example.m_vs
-    .row
-      .col-1 col-1
-      .col-11 col-11
-    .row
-      .col-2 col-2
-      .col-10 col-10
-    .row
-      .col-3 col-3
-      .col-9 col-9
-    .row
-      .col-4 col-4
-      .col-8 col-8
-    .row
-      .col-5 col-5
-      .col-7 col-7
-    .row
-      .col-6 col-6
-      .col-6 col-6
-    .row
-      .col-12 col-12
-    .row
-      .half half
-      .half half
-    .row
-      .third third
-      .two-thirds two-thirds
-    .row
-      .full full
-
-  .row
-    .col-12
-      .blur_container.m_round
-        .blur_content
-          img.pull-right(src="https://i.imgur.com/lOQl1VE.gif")
-        div.s_vs.m_hs
-          h2 Simple blur
-          p Blurring an image is a nice effect, but can be pretty painful to implement since the usual way of doing it also blurs the content.
-          br
-          p elkCSS supplies numerous subtle helpers to polish up your site.
-
-  br
-  br
-  h1 "Mobile First"
-  hr
-  center
-    p Fuck
+  center.m_vs
+    a(href="https://github.com/twentytwoo/elk-css")
+      button.m_vs.m_p Download
+        b  elkCSS
     br
-    p That
     br
-    p Shit.
-  br
-  p.s_vs Mobile First has to be the worst paradigm ever. It's complicated and difficult to visualise elements popping in as screen size expands. It only makes sense you'd reduce, rather than introduce complexity with smaller screen sizes.
-  p.s_vs Instead, elk prefers a system of removing elements as the screen size gets smaller, (reverse overlapping Mobile First)
-  p.s_vs For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also.
+    i.material-icons.l keyboard_arrow_down
 
-  p Consider,
-  .m_vs
-    script(src="https://gist.github.com/twentytwoo/ad6737bafd0139a64a8be3222a260126.js")
+.column
+  .col-12
+    h2 Responsive grid
+    hr
+    p Basic 12 column grid, includes some shorthands such as 
+    code half
+    | , 
+    code third
+    | , 
+    code twothirds
+    |  and 
+    code full
+    |.
+    p The whole thing has 3 breakpoints, desktop, laptop and mobile.
+    .m_vs
+      script(src="https://gist.github.com/twentytwoo/ddba61c9c798550e67fbf8f1e7486717.js")
+    p Read more about how elk handles responsive design in the "Mobile First" section.
 
-  p Which produces,
-
-  .row.preview
-    .col-4.hol.m_hs
-      p I'm getting outta here when you're on a Laptop or smaller
-    .col-8
-      p I'm here to stay, forever.
-
-  p The first element inside the row will disappear on a Laptop, but it also won't be present on a Mobile either.
+.grid-example.m_vs
   .row
-    .full
-      p Similarly you can use 
-      code .sod/l/m
-      p  to show elements when the user is on a certain device.
-
-  br
-  br
-  h1 Classes
-  hr
-  #docs
-    h6.mono .container
-    h6.mono .row
-    | Aligns items in a row
-    h6.mono .column
-    | Aligns content in a column
-    h6.mono .half
-    | Half parent width
-    h6.mono .third
-    | Third parent width
-    h6.mono .twothirds
-    | Two thirds of parent width
-    h6.mono .col-1...12
-    | Child ratio of parent width, in increments of 12th's
-    h6.mono .hod
-    | Hide On Desktop, hides content on desktop resolution
-    h6.mono .hol
-    | Hide On Laptop
-    h6.mono .hom
-    | Hide On Mobile
-    h6.mono .sod
-    | Show On Desktop, show content on desktop resolution
-    h6.mono .sol
-    | Show On Laptop
-    h6.mono .som
-    | Show on Mobile
-    h6.mono .vcenter
-    | Vertically center contents of self
-    h6.mono .hcenter
-    | Horizontally center contents of self
-    h6.mono .l/m/s_round
-    | Large/Medium/Small border-radius helper
-    h6.mono .l/m/s_shadow
-    | Large/Medium/Small box-shadow
-    h6.mono .l/m/s_vs
-    | Large/Medium/Small vertical space, applies to top and bottom of self
-    h6.mono .l/m/s_hs
-    | Large/Medium/Small horizontal space, applies to left and right of self
-    h6.mono .l/m/s_p
-    | Large/Medium/Small padding
-    h6.mono .nm
-    | self has No Margin
-    h6.mono .np
-    | self has No Padding
-    h6.mono .nr
-    | self is Not Responsive (will not react to change in screen size)
-    h6.mono .blur-container
-    | Set a parent element for the pseduo-element blur-content
-    h6.mono .blur-content
-    | Create the pseudo element blur-content
-    h6.mono .pull-left
-    | Pull self to left of parent
-    h6.mono .pull-right
-    | Pull self to right of parent
-    h6.mono .b
-    | Bold text
-    h6.mono .i
-    | Italic text
-    h6.mono .u
-    | Underline text
-    h6.mono .lt
-    | LineThrough text
-    h6.mono .bl
-    | Use flex baseline to align items to bottom of text
-
-  br
-  br
-  h1 Typography and others
-  hr
+    .col-1 col-1
+    .col-11 col-11
   .row
-    .col-6
-    .col-6
-      .column#heading-sizes
-        p elkCSS doesn't want to fight you.
-        p Fonts are kept simple, you pick what you want, elk sorts out the sizing - everythings good.
-        p Default fonts are: Helvetica for text and Inconsolata for code, served by Google Fonts.
-        .row.bl.s_vs
-          h1.s_hs Heading 1
-          code.hom 5rem
-        .row.bl.s_vs
-          h2.s_hs Heading 2
-          code.hom 4.2rem
-        .row.bl.s_vs
-          h3.s_hs Heading 3
-          code.hom 3.6rem
-        .row.bl.s_vs
-          h4.s_hs Heading 4
-          code.hom 3.0rem
-        .row.bl.s_vs
-          h5.s_hs Heading 5
-          code.hom 2.4rem
-        .row.bl.s_vs
-          h6.s_hs Heading 6
-          code.hom 1.5rem
+    .col-2 col-2
+    .col-10 col-10
+  .row
+    .col-3 col-3
+    .col-9 col-9
+  .row
+    .col-4 col-4
+    .col-8 col-8
+  .row
+    .col-5 col-5
+    .col-7 col-7
+  .row
+    .col-6 col-6
+    .col-6 col-6
+  .row
+    .col-12 col-12
+  .row
+    .half half
+    .half half
+  .row
+    .third third
+    .two-thirds two-thirds
+  .row
+    .full full
 
+.row
+  .col-12
+    .blur_container.m_round
+      .blur_content
+        img.pull-right(src="https://i.imgur.com/lOQl1VE.gif")
+      div.s_vs.m_hs
+        h2 Simple blur
+        p Blurring an image is a nice effect, but can be pretty painful to implement since the usual way of doing it also blurs the content.
+        br
+        p elkCSS supplies numerous subtle helpers to polish up your site.
+
+br
+br
+h1 "Mobile First"
+hr
+center
+  p Fuck
   br
+  p That
   br
-  h1 Credits
-  hr
-  p elkCSS 2.0
-  .row
-    p Created by&nbsp;
-    a(href="https://github.com/twentytwoo") twentytwoo
-  .row
-    p Like my work? Consider donating to help me out&nbsp;
-    a(href="https://ttxi.gq/donate") here.
+  p Shit.
+br
+p.s_vs Mobile First has to be the worst paradigm ever. It's complicated and difficult to visualise elements popping in as screen size expands. It only makes sense you'd reduce, rather than introduce complexity with smaller screen sizes.
+p.s_vs Instead, elk prefers a system of removing elements as the screen size gets smaller, (reverse overlapping Mobile First)
+p.s_vs For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also.
+
+p Consider,
+.m_vs
+  script(src="https://gist.github.com/twentytwoo/ad6737bafd0139a64a8be3222a260126.js")
+
+p Which produces,
+
+.row.preview
+  .col-4.hol.m_hs
+    p I'm getting outta here when you're on a Laptop or smaller
+  .col-8
+    p I'm here to stay, forever.
+
+p The first element inside the row will disappear on a Laptop, but it also won't be present on a Mobile either.
+.row
+  .full
+    p Similarly you can use 
+    code .sod/l/m
+    p  to show elements when the user is on a certain device.
+
+br
+br
+h1 Classes
+hr
+#docs
+  h6.mono .container
+  h6.mono .row
+  | Aligns items in a row
+  h6.mono .column
+  | Aligns content in a column
+  h6.mono .half
+  | Half parent width
+  h6.mono .third
+  | Third parent width
+  h6.mono .twothirds
+  | Two thirds of parent width
+  h6.mono .col-1...12
+  | Child ratio of parent width, in increments of 12th's
+  h6.mono .hod
+  | Hide On Desktop, hides content on desktop resolution
+  h6.mono .hol
+  | Hide On Laptop
+  h6.mono .hom
+  | Hide On Mobile
+  h6.mono .sod
+  | Show On Desktop, show content on desktop resolution
+  h6.mono .sol
+  | Show On Laptop
+  h6.mono .som
+  | Show on Mobile
+  h6.mono .vcenter
+  | Vertically center contents of self
+  h6.mono .hcenter
+  | Horizontally center contents of self
+  h6.mono .l/m/s_round
+  | Large/Medium/Small border-radius helper
+  h6.mono .l/m/s_shadow
+  | Large/Medium/Small box-shadow
+  h6.mono .l/m/s_vs
+  | Large/Medium/Small vertical space, applies to top and bottom of self
+  h6.mono .l/m/s_hs
+  | Large/Medium/Small horizontal space, applies to left and right of self
+  h6.mono .l/m/s_p
+  | Large/Medium/Small padding
+  h6.mono .nm
+  | self has No Margin
+  h6.mono .np
+  | self has No Padding
+  h6.mono .nr
+  | self is Not Responsive (will not react to change in screen size)
+  h6.mono .blur-container
+  | Set a parent element for the pseduo-element blur-content
+  h6.mono .blur-content
+  | Create the pseudo element blur-content
+  h6.mono .pull-left
+  | Pull self to left of parent
+  h6.mono .pull-right
+  | Pull self to right of parent
+  h6.mono .b
+  | Bold text
+  h6.mono .i
+  | Italic text
+  h6.mono .u
+  | Underline text
+  h6.mono .lt
+  | LineThrough text
+  h6.mono .bl
+  | Use flex baseline to align items to bottom of text
+
+br
+br
+h1 Typography and others
+hr
+.row
+  .col-6
+  .col-6
+    .column#heading-sizes
+      p elkCSS doesn't want to fight you.
+      p Fonts are kept simple, you pick what you want, elk sorts out the sizing - everythings good.
+      p Default fonts are: Helvetica for text and Inconsolata for code, served by Google Fonts.
+      .row.bl.s_vs
+        h1.s_hs Heading 1
+        code.hom 5rem
+      .row.bl.s_vs
+        h2.s_hs Heading 2
+        code.hom 4.2rem
+      .row.bl.s_vs
+        h3.s_hs Heading 3
+        code.hom 3.6rem
+      .row.bl.s_vs
+        h4.s_hs Heading 4
+        code.hom 3.0rem
+      .row.bl.s_vs
+        h5.s_hs Heading 5
+        code.hom 2.4rem
+      .row.bl.s_vs
+        h6.s_hs Heading 6
+        code.hom 1.5rem
+
+br
+br
+h1 Credits
+hr
+p elkCSS 2.0
+.row
+  p Created by&nbsp;
+  a(href="https://github.com/twentytwoo") twentytwoo
+.row
+  p Like my work? Consider donating to help me out&nbsp;
+  a(href="https://ttxi.gq/donate") here.
 
