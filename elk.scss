@@ -110,13 +110,11 @@ hr {
 .row {
   display: flex;
   flex-flow: row;
-  overflow: hidden;
 }
 
 .column {
   display: flex;
   flex-flow: column;
-  overflow: hidden;
 }
 
 .container:after,
@@ -126,14 +124,13 @@ hr {
   display: table;
   clear: both; }
 
-.half { width: 50%; overflow: hidden; }
-.third { width: 33.33333%; overflow: hidden; }
-.two-thirds { width: 66.66666%; overflow: hidden; }
-.full { width: 100%; overflow: hidden; }
+.half { width: 50%; }
+.third { width: 33.33333%; }
+.two-thirds { width: 66.66666%; }
+.full { width: 100%; }
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: percentage($i*(1/12));
-    overflow: hidden;
   }
 }
 
