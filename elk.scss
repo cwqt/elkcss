@@ -24,11 +24,11 @@ h1, h2, h3, h4, h5, h6, p, a, textarea, button, input {
   padding: 0;
 }
 
-p, a {
+p, a, ul, li{
   font-size: 1.8rem;
   line-height: 1.75;
-  display: inline;
 }
+p, a{ display: inline; }
 
 a {
   text-decoration: none;
@@ -95,6 +95,25 @@ hr {
   @extend .m_vs;
 }
 
+table:not(.highlight) {
+  width: 100%;
+  border-collapse: collapse;
+  thead * {
+    @extend .b;
+  }
+  * {
+    font-size: 1.8rem;
+    line-height: 1.75;
+    @extend .s_p;
+    @extend .tal;
+  }
+  th, td {
+    border-collapse: collapse;
+    @extend .nm;
+    border-bottom: 1px solid darken(#f4f4f7, 10%);
+  }
+}
+
 .container {
   width: $container-width;
   padding: $spacing-unit;
@@ -103,13 +122,15 @@ hr {
   overflow: hidden;
   @media #{$breakpoint-mobile} {
     min-width: 95vw;
-    padding: $spacing-unit/3;
+    padding: $spacing-unit/3 !important;
   }
 }
 
 .row {
   display: flex;
   flex-flow: row;
+  div:not(:only-child):first-child { margin-left: 0}
+  div:not(:only-child):last-child { margin-right: 0}
 }
 
 .column {
@@ -204,10 +225,7 @@ hr {
 .nm { margin: 0 }
 .np { padding: 0 }
 
-.row {
-  div:not(:only-child)::first-child { margin-left: 0}
-  div:not(:only-child)::last-child { margin-right: 0}
-}
+.fl { flex: 1; }
 
 .blur_container {
   position: relative;
@@ -262,4 +280,8 @@ hr {
 .pop-out {
   margin-left: -$spacing-unit;
   margin-right: -$spacing-unit;
+  @media #{$breakpoint-mobile} {
+    margin-left: -$spacing-unit/3;
+    margin-right: -$spacing-unit/3;
+  }
 }

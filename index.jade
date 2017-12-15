@@ -1,34 +1,26 @@
 .lander
-  .row
-    .half.vcenter.hom.m_vs
-      div
+  .column.tac.m_vs
+    center
+      .col-4#logo
+        img.pull-right(src="/elk.svg")
+      .col-12
         h1#title elkCSS
         h5 A sickeningly simple and responsive CSS boilerplate.
-    .half.vcenter#logo
-      img.pull-right(src="/elk.svg")
-  .row#github-buttons
-    div.som.tac.m_vs
-      h1#title elkCSS
-      h5 A sickeningly simple and responsive CSS boilerplate.
-    a.github-button(href="https://github.com/twentytwoo/elkCSS" data-style="mega" data-count-href="/twentytwoo/elkCSS/stargazers" data-count-api="/repos/twentytwoo/elkCSS#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star twentytwoo/elkCSS on GitHub") Star
-    .s_hs
-    a.github-button(href="https://github.com/twentytwoo/elkCSS/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/twentytwoo/elkCSS/network" data-count-api="/repos/twentytwoo/elkCSS#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork twentytwoo/elkCSS on GitHub") Fork
-  .l_vs
-  h6 Sites built with elkCSS
-  .row.s_vs#builtwith.pop-out
-    .col-6.hcenter
-      img(src="https://raw.githubusercontent.com/twentytwoo/ttxi.gq/master/ftp/www/projects/mikiai.png")
-    //- .col-6
-    //-   img(src="https://raw.githubusercontent.com/twentytwoo/ttxi.gq/master/ftp/www/projects/7qSQTDT.png")
-    .col-6.hcenter
-      img(src="https://raw.githubusercontent.com/twentytwoo/ttxi.gq/master/ftp/www/projects/stpgcf.png")
+        a#dlelk(href="https://github.com/twentytwoo/elk-css")
+          button.l_shadow.l_round.m_vs.l_p.focus Download
+            b  elkCSS
 
-  center
-    a(href="https://github.com/twentytwoo/elk-css")
-      button.m_vs.m_p Download
-        b  elkCSS
-    br
+h1 Intro
+hr
+p elkCSS is a result of the DRY principle, time and time again I've had to remake a base for websites, often taking valuable time to remind myself of documentation and properties. elk provides a simple base to build sites off in a sane and responsive fashion.
+br
+p elk is well suited for small websites, or those who don't want to hook in large frameworks. elk is a meant as a starting point, not a UI framework.
+.row#github-buttons.m_vs
+  a.github-button(href="https://github.com/twentytwoo/elkCSS" data-style="mega" data-count-href="/twentytwoo/elkCSS/stargazers" data-count-api="/repos/twentytwoo/elkCSS#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star twentytwoo/elkCSS on GitHub") Star
+  .s_hs
+  a.github-button(href="https://github.com/twentytwoo/elkCSS/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/twentytwoo/elkCSS/network" data-count-api="/repos/twentytwoo/elkCSS#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork twentytwoo/elkCSS on GitHub") Fork
 
+br
 .column
   .col-12
     h2 Responsive grid
@@ -100,7 +92,7 @@ center
   p Shit.
 br
 p.s_vs Mobile First has to be the worst paradigm ever. It's complicated and difficult to visualise elements popping in as screen size expands. It only makes sense you'd reduce, rather than introduce complexity with smaller screen sizes.
-p.s_vs Instead, elk prefers a system of removing elements as the screen size gets smaller, (reverse overlapping Mobile First)
+p.s_vs Instead, elk uses a unique system of removing elements as the screen size gets smaller, a sort of reverse Mobile Last.
 p.s_vs For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also.
 
 p Consider,
@@ -122,86 +114,196 @@ p The first element inside the row will disappear on a Laptop, but it also won't
     code .sod/l/m
     p  to show elements when the user is on a certain device.
 
+p A caveat of this approach is that elements can not specifically be hidden or shown only on one resolution. Hide and Show can also not be used on the same element at the same time.
+
 br
 br
 h1 Classes
 hr
 #docs
-  h6.mono .container
-  h6.mono .row
-  | Aligns items in a row
-  h6.mono .column
-  | Aligns content in a column
-  h6.mono .half
-  | Half parent width
-  h6.mono .third
-  | Third parent width
-  h6.mono .twothirds
-  | Two thirds of parent width
-  h6.mono .col-1...12
-  | Child ratio of parent width, in increments of 12th's
-  h6.mono .hod
-  | Hide On Desktop, hides content on desktop resolution
-  h6.mono .hol
-  | Hide On Laptop
-  h6.mono .hom
-  | Hide On Mobile
-  h6.mono .sod
-  | Show On Desktop, show content on desktop resolution
-  h6.mono .sol
-  | Show On Laptop
-  h6.mono .som
-  | Show on Mobile
-  h6.mono .vcenter
-  | Vertically center contents of self
-  h6.mono .hcenter
-  | Horizontally center contents of self
-  h6.mono .l/m/s_round
-  | Large/Medium/Small border-radius helper
-  h6.mono .l/m/s_shadow
-  | Large/Medium/Small box-shadow
-  h6.mono .l/m/s_vs
-  | Large/Medium/Small vertical space, applies to top and bottom of self
-  h6.mono .l/m/s_hs
-  | Large/Medium/Small horizontal space, applies to left and right of self
-  h6.mono .l/m/s_p
-  | Large/Medium/Small padding
-  h6.mono .nm
-  | self has No Margin
-  h6.mono .np
-  | self has No Padding
-  h6.mono .nr
-  | self is Not Responsive (will not react to change in screen size)
-  h6.mono .blur-container
-  | Set a parent element for the pseduo-element blur-content
-  h6.mono .blur-content
-  | Create the pseudo element blur-content
-  h6.mono .pull-left
-  | Pull self to left of parent
-  h6.mono .pull-right
-  | Pull self to right of parent
-  h6.mono .b
-  | Bold text
-  h6.mono .i
-  | Italic text
-  h6.mono .u
-  | Underline text
-  h6.mono .lt
-  | LineThrough text
-  h6.mono .bl
-  | Use flex baseline to align items to bottom of text
+  h5.mono .container
+  br
+  br
+  h5.mono .row
+  p Aligns items in a row
+  br
+  br
+  h5.mono .column
+  p Aligns content in a column
+  br
+  br
+  h5.mono .half
+  p Half parent width
+  br
+  br
+  h5.mono .third
+  p Third parent width
+  br
+  br
+  h5.mono .twothirds
+  p Two thirds of parent width
+  br
+  br
+  h5.mono .col-1...12
+  p Child ratio of parent width, in increments of 12th's
+  br
+  br
+  h5.mono .hod
+  p Hide On Desktop, hides content on desktop resolution
+  br
+  br
+  h5.mono .hol
+  p Hide On Laptop
+  br
+  br
+  h5.mono .hom
+  p Hide On Mobile
+  br
+  br
+  h5.mono .sod
+  p Show On Desktop, show content on desktop resolution
+  br
+  br
+  h5.mono .sol
+  p Show On Laptop
+  br
+  br
+  h5.mono .som
+  p Show on Mobile
+  br
+  br
+  h5.mono .vcenter
+  p Vertically center contents of self
+  br
+  br
+  h5.mono .hcenter
+  p Horizontally center contents of self
+  br
+  br
+  h5.mono .l/m/s_round
+  p Large/Medium/Small border-radius helper
+  br
+  br
+  h5.mono .l/m/s_shadow
+  p Large/Medium/Small box-shadow
+  br
+  br
+  h5.mono .l/m/s_vs
+  p Large/Medium/Small vertical space, applies to top and bottom of self
+  br
+  br
+  h5.mono .l/m/s_hs
+  p Large/Medium/Small horizontal space, applies to left and right of self
+  br
+  br
+  h5.mono .l/m/s_p
+  p Large/Medium/Small padding
+  br
+  br
+  h5.mono .nm
+  p self has No Margin
+  br
+  br
+  h5.mono .np
+  p self has No Padding
+  br
+  br
+  h5.mono .nr
+  p self is Not Responsive (will not react to change in screen size)
+  br
+  br
+  h5.mono .blur-container
+  p Set a parent element for the pseduo-element blur-content
+  br
+  br
+  h5.mono .blur-content
+  p Create the pseudo element blur-content
+  br
+  br
+  h5.mono .pull-left
+  p Pull self to left of parent
+  br
+  br
+  h5.mono .pull-right
+  p Pull self to right of parent
+  br
+  br
+  h5.mono .b
+  p Bold text
+  br
+  br
+  h5.mono .i
+  p Italic text
+  br
+  br
+  h5.mono .u
+  p Underline text
+  br
+  br
+  h5.mono .lt
+  p LineThrough text
+  br
+  br
+  h5.mono .bl
+  p Use flex baseline to align items to bottom of text
+  br
+  br
+  h5.mono .fl
+  p Fill Height
 
 br
+p With this simple set of classes you can create complex layouts without writing a single line of CSS yourself.
+
+.row.m_vs
+  .column.col-8
+    p.block.col-12.s_p.tar Hello World! My name is elkCSS and I'm a slick CSS boilerplate made for the cool minimalist kids.
+    p.block.col-12.s_vs.s_p These three imposters below thee, begone on mobile!
+    .row.fl.hom
+      .col-4.block.s_p.s_hs
+        img(src="/elk.svg")
+      .col-4.block.s_p
+        img(src="/elk.svg")
+      .col-4.block.s_p.s_hs
+        img(src="/elk.svg")
+  .column.col-4.s_hs.fl
+    .l_p
+      img(src="/elk.svg")
+    p.block.col-12.s_p.nm.fl.tac Image Caption
+
+script(src="https://gist.github.com/twentytwoo/b34ffc0b9c2692de0ae2fd6137a54493.js")
+
 br
 h1 Typography and others
 hr
 .row
   .col-6
-  .col-6
+    table
+      thead
+        tr
+          th Name
+          th Age
+          th Sex
+          th Location
+      tbody
+        tr
+          td Dave Gamache
+          td 26
+          td Male
+          td San Francisco
+        tr
+          td Dwayne Johnson
+          td 42
+          td Male
+          td Hayward
+    ul
+      li Eggs
+      li Milk
+      ul
+        li Chocolate
+        li Sweets
+  .col-6.m_hs
     .column#heading-sizes
-      p elkCSS doesn't want to fight you.
-      p Fonts are kept simple, you pick what you want, elk sorts out the sizing - everythings good.
-      p Default fonts are: Helvetica for text and Inconsolata for code, served by Google Fonts.
+      p By default Helvetica is used for text and Inconsolata for code, served by Google Fonts.
       .row.bl.s_vs
         h1.s_hs Heading 1
         code.hom 5rem
@@ -233,3 +335,10 @@ p elkCSS 2.0
   p Like my work? Consider donating to help me out&nbsp;
   a(href="https://ttxi.gq/donate") here.
 
+.l_vs
+h6 Sites built with elkCSS
+.row.s_vs#builtwith.pop-out
+  .col-6.hcenter
+    img(src="https://raw.githubusercontent.com/twentytwoo/ttxi.gq/master/ftp/www/projects/mikiai.png")
+  .col-6.hcenter
+    img(src="https://raw.githubusercontent.com/twentytwoo/ttxi.gq/master/ftp/www/projects/stpgcf.png")
