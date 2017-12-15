@@ -258,3 +258,8 @@ hr {
   @extend .m_vs;
   @extend .m_p;
 }
+
+.pop-out {
+  margin-left: -$spacing-unit;
+  margin-right: -$spacing-unit;
+}
