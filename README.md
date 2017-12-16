@@ -1,8 +1,8 @@
 <p align="center">
 <img src="./elk.svg" width=200> 
-<h1>elkCSS</h1>
 </p>
 
+# elkCSS
 
 ## How to use elkCSS (CSS)
 
