@@ -6,15 +6,30 @@
       .col-12
         h1#title elkCSS
         h5 A sickeningly simple and responsive CSS boilerplate.
+        br
         a#dlelk(href="https://github.com/twentytwoo/elk-css")
           button.l_shadow.l_round.m_vs.l_p.focus Download
             b  elkCSS
 
-h1 Intro
 hr
-p elkCSS is a result of the DRY principle, time and time again I've had to remake a base for websites, often taking valuable time to remind myself of documentation and properties. elk provides a simple base to build sites off in a sane and responsive fashion.
+.row.nav
+  //- a.s_hs(href="#intro") Intro
+  a.s_hs(href="#responsive-grid") Responsive grid
+  a.s_hs(href="#mobile-first") "Mobile First"
+  a.s_hs(href="#classes") Classes
+  a.s_hs(href="#exemplar") Exemplar
+  a.s_hs(href="#elements") Elements
+  a.s_hs(href="#credits") Credits
+hr
+
 br
-p elk is well suited for small websites, or those who don't want to hook in large frameworks. elk is a meant as a starting point, not a UI framework.
+br
+h2#intro Intro
+hr
+p elkCSS is a result of the DRY principle and irritation with other frameworks, time and time again I've had to remake the same things for websites, often taking valuable time to remind myself of documentation and properties. Other frameworks also have their annoying niggles, ranging from long-winded class names to convoluted media queries and grid systems.
+br
+p elk does away with all of that, staying as simple as possible.
+p As a result elk is well suited for rapid development, small websites (a mere 1.8KiB when gzipped), or those who don't want to hook in large frameworks.
 .row#github-buttons.m_vs
   a.github-button(href="https://github.com/twentytwoo/elkCSS" data-style="mega" data-count-href="/twentytwoo/elkCSS/stargazers" data-count-api="/repos/twentytwoo/elkCSS#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star twentytwoo/elkCSS on GitHub") Star
   .s_hs
@@ -23,7 +38,7 @@ p elk is well suited for small websites, or those who don't want to hook in larg
 br
 .column
   .col-12
-    h2 Responsive grid
+    h2#responsive-grid Responsive grid
     hr
     p Basic 12 column grid, includes some shorthands such as 
     code half
@@ -82,7 +97,7 @@ br
 
 br
 br
-h1 "Mobile First"
+h1#mobile-first "Mobile First"
 hr
 center
   p Fuck
@@ -92,7 +107,7 @@ center
   p Shit.
 br
 p.s_vs Mobile First has to be the worst paradigm ever. It's complicated and difficult to visualise elements popping in as screen size expands. It only makes sense you'd reduce, rather than introduce complexity with smaller screen sizes.
-p.s_vs Instead, elk uses a unique system of removing elements as the screen size gets smaller, a sort of reverse Mobile Last.
+p.s_vs Instead, elk uses a unique system of removing elements as the screen size gets smaller, a sort of "Mobile Last".
 p.s_vs For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also.
 
 p Consider,
@@ -118,7 +133,7 @@ p A caveat of this approach is that elements can not specifically be hidden or s
 
 br
 br
-h1 Classes
+h1#classes Classes
 hr
 #docs
   h5.mono .container
@@ -250,13 +265,21 @@ hr
   br
   h5.mono .fl
   p Fill Height
+  br
+  br
+  h5.mono .pop-out
+  p Allows content to fill full width of container, ignoring the container padding.
+
 
 br
-p With this simple set of classes you can create complex layouts without writing a single line of CSS yourself.
+br
+h2#exemplar Exemplar
+hr
+p With this simple set of classes you can create complex layouts without writing a single line of CSS yourself in a condensed fashion.
 
 .row.m_vs
   .column.col-8
-    p.block.col-12.s_p.tar Hello World! My name is elkCSS and I'm a slick CSS boilerplate made for the cool minimalist kids.
+    p.block.col-12.s_p.tac Hello World! My name is elkCSS and I'm a slick CSS boilerplate made for the cool minimalist kids.
     p.block.col-12.s_vs.s_p These three imposters below thee, begone on mobile!
     .row.fl.hom
       .col-4.block.s_p.s_hs
@@ -268,12 +291,12 @@ p With this simple set of classes you can create complex layouts without writing
   .column.col-4.s_hs.fl
     .l_p
       img(src="/elk.svg")
-    p.block.col-12.s_p.nm.fl.tac Image Caption
+    p.block.col-12.s_p.nm.fl.vcenter.hcenter Image Caption
 
 script(src="https://gist.github.com/twentytwoo/b34ffc0b9c2692de0ae2fd6137a54493.js")
 
 br
-h1 Typography and others
+h2#elements Elements
 hr
 .row
   .col-6
@@ -301,6 +324,9 @@ hr
       ul
         li Chocolate
         li Sweets
+
+    blockquote Pray that your loneliness may spur you into finding something to live for, great enough to die for.
+
   .col-6.m_hs
     .column#heading-sizes
       p By default Helvetica is used for text and Inconsolata for code, served by Google Fonts.
@@ -325,14 +351,14 @@ hr
 
 br
 br
-h1 Credits
+h1#credits Credits
 hr
 p elkCSS 2.0
 .row
   p Created by&nbsp;
   a(href="https://github.com/twentytwoo") twentytwoo
 .row
-  p Like my work? Consider donating to help me out&nbsp;
+  p Like my work? Consider donating &nbsp;
   a(href="https://ttxi.gq/donate") here.
 
 .l_vs

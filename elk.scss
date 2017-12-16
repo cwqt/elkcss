@@ -7,7 +7,6 @@ $ttime: 0.2s;
 $breakpoint-desktop: "only screen and (min-width : 1200px)";
 $breakpoint-laptop:  "only screen and (max-width : 1200px)";
 $breakpoint-mobile:  "only screen and (max-width : 720px)";
-// @media #{$breakpoint}
 
 * { box-sizing: border-box; }
 html { font-size: 62.5%; }
@@ -19,22 +18,30 @@ html, body {
   color: #222;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, textarea, button, input {
+h1, h2, h3, h4, h5, h6, p, a, textarea, button, input, blockquote {
   margin: 0;
   padding: 0;
 }
 
-p, a, ul, li{
+p, a, ul, li, blockquote {
   font-size: 1.8rem;
   line-height: 1.75;
 }
 p, a{ display: inline; }
 
 a {
-  text-decoration: none;
+  color: #222;
+  transition: $ttime;
   &:hover {
+    color: darken(lightblue, 40%);
     text-decoration: underline;
   }
+}
+
+blockquote {
+  border-left: thick solid #f4f4f7;
+  @extend .m_vs;
+  @extend .m_p;
 }
 
 h1 { font-size: 5.0rem; }
@@ -129,8 +136,8 @@ table:not(.highlight) {
 .row {
   display: flex;
   flex-flow: row;
-  div:not(:only-child):first-child { margin-left: 0}
-  div:not(:only-child):last-child { margin-right: 0}
+  div:not(:only-of-type):first-child { margin-left: 0}
+  div:not(:only-of-type):last-child { margin-right: 0}
 }
 
 .column {

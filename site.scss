@@ -24,8 +24,11 @@ body { background: #f4f4f7; }
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-size: 1.8rem;
+    line-height: 1.75;
   }
 }
+.nav a { text-decoration: none; }
 .blur_container { color: white; }
 .lander { min-height: 100vh; }
 #title { font-size: 600%; }
