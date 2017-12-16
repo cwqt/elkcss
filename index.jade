@@ -219,7 +219,7 @@ hr
   h5.mono .bl
   p Use flex baseline to align items to bottom of text
 
-  h5.mono .fl
+  h5.mono .fh
   p Fill Height, (only works in flex-flow: column)
 
   h5.mono .pop-out
@@ -232,7 +232,7 @@ hr
   p Applies a circular border-radius, will be a circle if object has aspect ratio of 1:1
 
   h5.mono .ib
-  p Inline Block
+  p Inline Block, p and a elements are inline by default thus their self margins/paddings aren't valid unless inline-block/block
 
 br
 br
@@ -244,17 +244,17 @@ p With this simple set of classes you can create complex layouts without writing
   .column.col-8
     p.block.col-12.s_p.tac Hello World! My name is elkCSS and I'm a slick CSS boilerplate made for the cool minimalist kids.
     p.block.col-12.s_vs.s_p These three imposters below thee, begone on mobile!
-    .row.fl.hom
+    .row.fh.hom
       .col-4.block.s_p.s_hs
         img(src="/elk.svg")
       .col-4.block.s_p
         img(src="/elk.svg")
       .col-4.block.s_p.s_hs
         img(src="/elk.svg")
-  .column.col-4.s_hs.fl
+  .column.col-4.s_hs.fh
     .l_p
       img(src="/elk.svg")
-    p.block.col-12.s_p.nm.fl.vcenter.hcenter Image Caption
+    p.block.col-12.s_p.nm.fh.vcenter.hcenter Image Caption
 
 script(src="https://gist.github.com/twentytwoo/b34ffc0b9c2692de0ae2fd6137a54493.js")
 
@@ -270,7 +270,7 @@ script(src="https://gist.github.com/twentytwoo/b34ffc0b9c2692de0ae2fd6137a54493.
         p elkCSS supplies numerous subtle helpers to polish up your site.
 .row
   .column.col-6
-    .block.l_round.l_shadow.l_p.l_vs.ls_hs.fl
+    .block.l_round.l_shadow.l_p.l_vs.ls_hs.fh
       img.circle(src="https://i.imgur.com/lOQl1VE.gif")
   .col-6.l_vs.l_hs
     h3 Misc. UI
