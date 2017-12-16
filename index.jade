@@ -13,7 +13,6 @@
 
 hr
 .row.nav
-  //- a.s_hs(href="#intro") Intro
   a.s_hs(href="#responsive-grid") Responsive grid
   a.s_hs(href="#mobile-first") "Mobile First"
   a.s_hs(href="#classes") Classes
@@ -84,17 +83,6 @@ br
   .row
     .full full
 
-.row
-  .col-12
-    .blur_container.m_round
-      .blur_content
-        img.pull-right(src="https://i.imgur.com/lOQl1VE.gif")
-      div.s_vs.m_hs
-        h2 Simple blur
-        p Blurring an image is a nice effect, but can be pretty painful to implement since the usual way of doing it also blurs the content.
-        br
-        p elkCSS supplies numerous subtle helpers to polish up your site.
-
 br
 br
 h1#mobile-first "Mobile First"
@@ -137,139 +125,114 @@ h1#classes Classes
 hr
 #docs
   h5.mono .container
-  br
-  br
+
   h5.mono .row
   p Aligns items in a row
-  br
-  br
+
   h5.mono .column
   p Aligns content in a column
-  br
-  br
+
   h5.mono .half
   p Half parent width
-  br
-  br
+
   h5.mono .third
   p Third parent width
-  br
-  br
+
   h5.mono .twothirds
   p Two thirds of parent width
-  br
-  br
+
   h5.mono .col-1...12
   p Child ratio of parent width, in increments of 12th's
-  br
-  br
+
   h5.mono .hod
   p Hide On Desktop, hides content on desktop resolution
-  br
-  br
+
   h5.mono .hol
   p Hide On Laptop
-  br
-  br
+
   h5.mono .hom
   p Hide On Mobile
-  br
-  br
+
   h5.mono .sod
   p Show On Desktop, show content on desktop resolution
-  br
-  br
+
   h5.mono .sol
   p Show On Laptop
-  br
-  br
+
   h5.mono .som
   p Show on Mobile
-  br
-  br
+
   h5.mono .vcenter
   p Vertically center contents of self
-  br
-  br
+
   h5.mono .hcenter
   p Horizontally center contents of self
-  br
-  br
+
   h5.mono .l/m/s_round
   p Large/Medium/Small border-radius helper
-  br
-  br
+
   h5.mono .l/m/s_shadow
   p Large/Medium/Small box-shadow
-  br
-  br
+
   h5.mono .l/m/s_vs
   p Large/Medium/Small vertical space, applies to top and bottom of self
-  br
-  br
+
   h5.mono .l/m/s_hs
   p Large/Medium/Small horizontal space, applies to left and right of self
-  br
-  br
+
   h5.mono .l/m/s_p
   p Large/Medium/Small padding
-  br
-  br
+
   h5.mono .nm
   p self has No Margin
-  br
-  br
+
   h5.mono .np
   p self has No Padding
-  br
-  br
+
   h5.mono .nr
   p self is Not Responsive (will not react to change in screen size)
-  br
-  br
+
   h5.mono .blur-container
   p Set a parent element for the pseduo-element blur-content
-  br
-  br
+
   h5.mono .blur-content
   p Create the pseudo element blur-content
-  br
-  br
+
   h5.mono .pull-left
   p Pull self to left of parent
-  br
-  br
+
   h5.mono .pull-right
   p Pull self to right of parent
-  br
-  br
+
   h5.mono .b
   p Bold text
-  br
-  br
+
   h5.mono .i
   p Italic text
-  br
-  br
+
   h5.mono .u
   p Underline text
-  br
-  br
+
   h5.mono .lt
   p LineThrough text
-  br
-  br
+
   h5.mono .bl
   p Use flex baseline to align items to bottom of text
-  br
-  br
+
   h5.mono .fl
-  p Fill Height
-  br
-  br
+  p Fill Height, (only works in flex-flow: column)
+
   h5.mono .pop-out
   p Allows content to fill full width of container, ignoring the container padding.
 
+  h5.mono .aw
+  p Auto Width, used on pop-out with col's to fully span container width
+
+  h5.mono .circle
+  p Applies a circular border-radius, will be a circle if object has aspect ratio of 1:1
+
+  h5.mono .ib
+  p Inline Block
 
 br
 br
@@ -294,6 +257,44 @@ p With this simple set of classes you can create complex layouts without writing
     p.block.col-12.s_p.nm.fl.vcenter.hcenter Image Caption
 
 script(src="https://gist.github.com/twentytwoo/b34ffc0b9c2692de0ae2fd6137a54493.js")
+
+.row
+  .col-12.pop-out.aw
+    .blur_container
+      .blur_content
+        img.pull-right(src="https://i.imgur.com/lOQl1VE.gif")
+      div.s_vs.m_hs
+        h2 Simple blur
+        p Blurring an image is a nice effect, but can be pretty painful to implement since the usual way of doing it also blurs the content.
+        br
+        p elkCSS supplies numerous subtle helpers to polish up your site.
+.row
+  .column.col-6
+    .block.l_round.l_shadow.l_p.l_vs.ls_hs.fl
+      img.circle(src="https://i.imgur.com/lOQl1VE.gif")
+  .col-6.l_vs.l_hs
+    h3 Misc. UI
+    p A number of subtle UI helper classes are included, 
+    code .x_round
+    | , 
+    code .x_shadow.
+    | , 
+    code x_p.
+    | , 
+    code x_vs.
+    | , 
+    code x_hs
+    p &nbsp;and, 
+    code .blur_container
+    | , 
+    code .blur_content
+    br
+    p Where x is either, l, m, s, for Large, Medium or Small.
+    br
+    br
+    p Their use is shown below.
+
+script(src="https://gist.github.com/twentytwoo/be8590f8acd40f43b7c7812f2a7b0197.js")
 
 br
 h2#elements Elements
@@ -358,7 +359,7 @@ p elkCSS 2.0
   p Created by&nbsp;
   a(href="https://github.com/twentytwoo") twentytwoo
 .row
-  p Like my work? Consider donating 
+  p Like my work? Consider donating&nbsp;
   a(href="https://ttxi.gq/donate") here.
 
 .l_vs

@@ -38,6 +38,10 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 blockquote {
   border-left: thick solid #f4f4f7;
   @extend .m_vs;
@@ -232,7 +236,11 @@ table:not(.highlight) {
 .nm { margin: 0 }
 .np { padding: 0 }
 
-.fl { flex: 1; }
+.fl { flex: 1 }
+.bl { align-items: baseline; }
+.mono { font-family: "Inconsolata"}
+.ib { display: inline-block; }
+.circle { border-radius: 50%; }
 
 .blur_container {
   position: relative;
@@ -271,9 +279,6 @@ table:not(.highlight) {
 .u { text-decoration: underline; }
 .lt { text-decoration: line-through;}
 
-.bl { align-items: baseline; }
-.mono { font-family: "Inconsolata"}
-
 .tac { text-align: center; }
 .tal { text-align: left; }
 .tar { text-align: right; }
@@ -284,6 +289,7 @@ table:not(.highlight) {
   @extend .m_p;
 }
 
+.aw { width: auto; }
 .pop-out {
   margin-left: -$spacing-unit;
   margin-right: -$spacing-unit;
