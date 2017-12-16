@@ -10,3 +10,10 @@ html
   body.hcenter
     .container.l_round.s_shadow.m_vs.l_p
       != yield
+  // Global site tag (gtag.js) - Google Analytics
+  script(async="", src="https://www.googletagmanager.com/gtag/js?id=UA-111278512-1")
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-111278512-1');
