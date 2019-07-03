@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./elk.svg" width=200> 
+<img src="./src/assets/elk.svg" width=200> 
 </p>
 
 # elkCSS
@@ -8,26 +8,16 @@
 
 - Download `elk.min.css` from this repo
 - Move it to your project folder
-- Include it in the head via (assuming your stylesheet + html file are in the same directory)
+- Include it in the `head`
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
 <link rel="stylesheet" type="text/css" href="elk.min.css">
-
-some stuff
-
-</head>
-<body>
-
-your code here
 ```
 
 ## How to use elkCSS (SCSS)
 
 - Clone this repo
-- Import the elk.scss file into your main scss file
+- Import the `elk.scss` from `./src/sass/elk.scss` file into your main scss file
 
 Ideally you should use the elkCSS presets for things like padding and margins, for example:
 
@@ -38,5 +28,3 @@ Ideally you should use the elkCSS presets for things like padding and margins, f
   @extend .m_p;
 }
 ```
-
-If you get stuck, shoot me an e-mail or contact me on the /wg/ discord server, [https://discord.gg/xW8r4nX](https://discord.gg/xW8r4nX).
