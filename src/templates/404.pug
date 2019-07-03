@@ -1,5 +1,24 @@
-.column.vcenter.tac
-  .col-5
-    img.l_vs(src="/elk.svg")
-  h1 404
-  h5 Whoops. Looks like what you're looking for can't be found.
+doctype
+html
+	head
+		title elkCSS | A simple and responsive CSS boilerplate.
+		link(rel="icon" href="/assets/img/elk.svg" sizes="any" type="image/svg+xml")
+		link(rel="stylesheet" href="/assets/css/elk.css")
+		link(rel="stylesheet" href="/assets/css/site.css")
+	body.hcenter
+		.container.mvs.lp
+			.column.vcenter.tac
+				.col-4
+					img.l_vs(src="/assets/img/elk.svg")
+				.col-6
+					h1 404
+					h5 Whoops. Looks like what you're looking for can't be found.
+
+	// Global site tag (gtag.js) - Google Analytics
+	script(async="", src="https://www.googletagmanager.com/gtag/js?id=UA-111278512-1")
+	script.
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-111278512-1');
+
