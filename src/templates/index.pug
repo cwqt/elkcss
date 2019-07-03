@@ -66,33 +66,51 @@ html
 
       .grid-example.mvs
         .row
-          .col-1 col-1
-          .col-11 col-11
+          .col-1
+            p col-1
+          .col-11
+            p col-11
         .row
-          .col-2 col-2
-          .col-10 col-10
+          .col-2
+            p col-2
+          .col-10
+            p col-10
         .row
-          .col-3 col-3
-          .col-9 col-9
+          .col-3
+            p col-3
+          .col-9
+            p col-9
         .row
-          .col-4 col-4
-          .col-8 col-8
+          .col-4
+            p col-4
+          .col-8
+            p col-8
         .row
-          .col-5 col-5
-          .col-7 col-7
+          .col-5
+            p col-5
+          .col-7
+            p col-7
         .row
-          .col-6 col-6
-          .col-6 col-6
+          .col-6
+            p col-6
+          .col-6
+            p col-6
         .row
-          .col-12 col-12
+          .col-12
+            p col-12
         .row
-          .half half
-          .half half
+          .half
+            p half
+          .half
+            p half
         .row
-          .third third
-          .two-thirds two-thirds
+          .third
+            p third
+          .two-thirds
+            p two-thirds
         .row
-          .full full
+          .full
+            p full
 
       br
       br
@@ -119,8 +137,8 @@ html
       .row
         .full
           p Similarly you can use 
-          code .sod/l/m
-          p  to show elements when the user is on a certain device.
+            code .sod/l/m
+            |  to show elements when the user is on a certain device.
 
       p A caveat of this approach is that elements can not specifically be hidden or shown only on one breakpoint. Hide and Show can also not be used on the same element at the same time.
 
@@ -129,133 +147,133 @@ html
       h3#classes Classes
       hr
       #docs
-        .row.nr
+        .row
           code .container
           p Container
 
-        .row.nr
+        .row
           code .row
           p Aligns items in a row
 
-        .row.nr
+        .row
           code .column
           p Aligns content in a column
 
-        .row.nr
+        .row
           code .half
           p Half parent width
 
-        .row.nr
+        .row
           code .third
           p Third parent width
 
-        .row.nr
+        .row
           code .twothirds
           p Two thirds of parent width
 
-        .row.nr
+        .row
           code .col-1...12
           p Child ratio of parent width, in increments of 12th's
 
-        .row.nr
+        .row
           code .hod
           p Hide On Desktop, hides content on desktop resolution
 
-        .row.nr
+        .row
           code .hol
           p Hide On Laptop
 
-        .row.nr
+        .row
           code .hom
           p Hide On Mobile
 
-        .row.nr
+        .row
           code .sod
           p Show On Desktop, show content on desktop resolution
 
-        .row.nr
+        .row
           code .sol
           p Show On Laptop
 
-        .row.nr
+        .row
           code .som
           p Show on Mobile
 
-        .row.nr
+        .row
           code .vcenter
           p Vertically center contents of self
 
-        .row.nr
+        .row
           code .hcenter
           p Horizontally center contents of self
 
-        .row.nr
+        .row
           code .l/m/svs
           p Large/Medium/Small vertical space, applies to top and bottom of self
 
-        .row.nr
+        .row
           code .l/m/shs
           p Large/Medium/Small horizontal space, applies to left and right of self
 
-        .row.nr
+        .row
           code .l/m/sp
           p Large/Medium/Small padding
 
-        .row.nr
+        .row
           code .nm
           p self has No Margin
 
-        .row.nr
+        .row
           code .np
           p self has No Padding
 
-        .row.nr
+        .row
           code .nr
           p self is Not Responsive (will not react to change in screen size)
 
-        .row.nr
+        .row
           code .pull-left
           p Pull self to left of parent
 
-        .row.nr
+        .row
           code .pull-right
           p Pull self to right of parent
 
-        .row.nr
+        .row
           code .b
           p Bold text
 
-        .row.nr
+        .row
           code .i
           p Italic text
 
-        .row.nr
+        .row
           code .u
           p Underline text
 
-        .row.nr
+        .row
           code .lt
           p LineThrough text
 
-        .row.nr
+        .row
           code .bl
           p Use flex baseline to align items to bottom of text
 
-        .row.nr
+        .row
           code .fh
           p Fill Height, (only works in flex-flow: column)
 
-        .row.nr
+        .row
           code .pop-out
           p Allows content to fill full width of container, ignoring the container padding.
 
-        .row.nr
+        .row
           code .aw
           p Auto Width, used on pop-out with col's to fully span container width
 
-        .row.nr
+        .row
           code .ib
-          p Inline Block, p and a elements are inline by deult thus their self margins/paddings aren't valid unless inline-block/bloc      k
+          p Inline Block, p and a elements are inline by deult thus their self margins/paddings aren't valid unless inline-block/block
 
       br
       br
@@ -311,7 +329,8 @@ html
               li Chocolate
               li Sweets
 
-          blockquote Pray that your loneliness may spur you into finding something to live for, great enough to die for.
+          blockquote
+            p Pray that your loneliness may spur you into finding something to live for, great enough to die for.
 
           input(type="text", placeholder="Contact us!")
 

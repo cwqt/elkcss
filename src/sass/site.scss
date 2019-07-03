@@ -150,6 +150,14 @@ a:not(#dlelk), p a {
   .gitlab-embed-snippets .line-numbers span {
     min-width: initial !important;
   }
+  #docs {
+    code {
+      width: 100%;
+    }
+    p {
+      margin-bottom: 1rem !important;
+    }
+  }
 }
 
 
