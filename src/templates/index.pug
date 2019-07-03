@@ -1,0 +1,346 @@
+doctype
+html
+  head
+    title elkCSS | A simple and responsive CSS boilerplate.
+    link(rel="icon" href="/assets/img/elk.svg" sizes="any" type="image/svg+xml")
+    link(rel="stylesheet" href="/assets/css/elk.css")
+    link(rel="stylesheet" href="/assets/css/site.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+  body.hcenter
+    .container.lp
+      .lander.row.lp.lvs
+        .col-8
+          h1#title elkCSS
+          h5 A simple and responsive CSS boilerplate.
+          .vcenter.hcenter.lvs.lp
+            a#dlelk(href="https://github.com/ttxi/elkCSS")
+              button.mvs.mp.focus
+                .vcenter
+                  i.material-icons cloud_download
+                  | &nbsp;&nbsp;&nbsp;Download&nbsp;
+                  b  elkCSS
+        .col-4
+          img.pull-right(src="/assets/img/elk.svg")
+
+      hr
+      .row.nav
+        a.shs(href="#responsive-grid") Responsive grid
+        a.shs(href="#mobile-first") "Mobile First"
+        a.shs(href="#classes") Classes
+        a.shs(href="#exemplar") Exemplar
+        a.shs(href="#elements") Elements
+        a.shs(href="#credits") Credits
+      hr
+
+      br
+      br
+      h2#intro Intro
+      hr
+      p
+        b elkCSS
+        | is a bare bones and simple CSS boilerplate designed for making simple sites rapidly. It does very little to affect the style of elements and instead focuses on give the user a solid grid system to work off to create their designs.
+      br
+      p As a result
+        b elk
+        | is well suited for rapid development, small websites (a mere 1.8KiB when gzipped), or those who don't want to hook in large frameworks.
+
+      br
+      .column
+        .col-12
+          h2#responsive-grid Responsive grid
+          hr
+          p Basic 12 column grid, includes some shorthands such as 
+            code half
+            | , 
+            code third
+            | , 
+            code twothirds
+            |  and 
+            code full
+            |.
+            |  There are three breakpoints; desktop, laptop and mobile.
+          .mvs
+            script(src="https://gitlab.com/snippets/1871629.js")
+          p Read more about how elk handles responsive design in the "Mobile First" section.
+
+      .grid-example.mvs
+        .row
+          .col-1 col-1
+          .col-11 col-11
+        .row
+          .col-2 col-2
+          .col-10 col-10
+        .row
+          .col-3 col-3
+          .col-9 col-9
+        .row
+          .col-4 col-4
+          .col-8 col-8
+        .row
+          .col-5 col-5
+          .col-7 col-7
+        .row
+          .col-6 col-6
+          .col-6 col-6
+        .row
+          .col-12 col-12
+        .row
+          .half half
+          .half half
+        .row
+          .third third
+          .two-thirds two-thirds
+        .row
+          .full full
+
+      br
+      br
+      h1#mobile-first "Mobile First"
+      hr
+      p.svs
+        b elk
+        | uses a unique system of removing elements as the screen size gets smaller, a sort of "Mobile Last".
+      p.svs For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also. This way complexity is reduced when moving down in resolution as opposed to introducing it.
+
+      p Consider,
+      .mvs
+        script(src="https://gist.github.com/ttxi/ad6737bafd0139a64a8be3222a260126.js")
+
+      p Which produces,
+
+      .row.lvs
+        .col-8.hol.mhs.box.vcenter.hcenter
+          h6 Laptop or smaller... I disappear.
+        .col-4.box.vcenter.hcenter
+          b I'm here to stay, forever.
+
+      p The first element inside the row will disappear on a Laptop, but it also won't be present on a Mobile either.
+      .row
+        .full
+          p Similarly you can use 
+          code .sod/l/m
+          p  to show elements when the user is on a certain device.
+
+      p A caveat of this approach is that elements can not specifically be hidden or shown only on one breakpoint. Hide and Show can also not be used on the same element at the same time.
+
+      br
+      br
+      h1#classes Classes
+      hr
+      #docs
+        .row
+          code .container
+          p Container
+
+        .row
+          code .row
+          p Aligns items in a row
+
+        .row
+          code .column
+          p Aligns content in a column
+
+        .row
+          code .half
+          p Half parent width
+
+        .row
+          code .third
+          p Third parent width
+
+        .row
+          code .twothirds
+          p Two thirds of parent width
+
+        .row
+          code .col-1...12
+          p Child ratio of parent width, in increments of 12th's
+
+        .row
+          code .hod
+          p Hide On Desktop, hides content on desktop resolution
+
+        .row
+          code .hol
+          p Hide On Laptop
+
+        .row
+          code .hom
+          p Hide On Mobile
+
+        .row
+          code .sod
+          p Show On Desktop, show content on desktop resolution
+
+        .row
+          code .sol
+          p Show On Laptop
+
+        .row
+          code .som
+          p Show on Mobile
+
+        .row
+          code .vcenter
+          p Vertically center contents of self
+
+        .row
+          code .hcenter
+          p Horizontally center contents of self
+
+        .row
+          code .l/m/svs
+          p Large/Medium/Small vertical space, applies to top and bottom of self
+
+        .row
+          code .l/m/shs
+          p Large/Medium/Small horizontal space, applies to left and right of self
+
+        .row
+          code .l/m/sp
+          p Large/Medium/Small padding
+
+        .row
+          code .nm
+          p self has No Margin
+
+        .row
+          code .np
+          p self has No Padding
+
+        .row
+          code .nr
+          p self is Not Responsive (will not react to change in screen size)
+
+        .row
+          code .pull-left
+          p Pull self to left of parent
+
+        .row
+          code .pull-right
+          p Pull self to right of parent
+
+        .row
+          code .b
+          p Bold text
+
+        .row
+          code .i
+          p Italic text
+
+        .row
+          code .u
+          p Underline text
+
+        .row
+          code .lt
+          p LineThrough text
+
+        .row
+          code .bl
+          p Use flex baseline to align items to bottom of text
+
+        .row
+          code .fh
+          p Fill Height, (only works in flex-flow: column)
+
+        .row
+          code .pop-out
+          p Allows content to fill full width of container, ignoring the container padding.
+
+        .row
+          code .aw
+          p Auto Width, used on pop-out with col's to fully span container width
+
+        .row
+          code .ib
+          p Inline Block, p and a elements are inline by deult thus their self margins/paddings aren't valid unless inline-block/bloc      k
+
+      br
+      br
+      h2#exemplar Exemplar
+      hr
+      p With this simple set of classes you can create complex layouts in a condensed fashion without writing a single line of CSS yourself.
+
+      .row.mvs
+        .column.col-8
+          p.block.col-12.sp.tac A simple and responsive CSS boilerplate.
+          p.block.col-12.svs.sp Hide all three images below on mobile ↓
+          .row.fh.hom
+            .col-4.block.sp.shs
+              img(src="/assets/img/elk.svg")
+            .col-4.block.sp
+              img(src="/assets/img/elk.svg")
+            .col-4.block.sp.shs
+              img(src="/assets/img/elk.svg")
+        .column.col-4.shs.fh
+          .lp
+            img(src="/assets/img/elk.svg")
+          p.block.col-12.sp.nm.fh.vcenter.hcenter Image Caption
+
+      script(src="https://gist.github.com/ttxi/b34ffc0b9c2692de0ae2fd6137a54493.js")
+
+      br
+      h2#elements Elements
+      hr
+      .row
+        .col-6
+          table
+            thead
+              tr
+                th Name
+                th Age
+                th Sex
+                th Location
+            tbody
+              tr
+                td Dave Gamache
+                td 26
+                td Male
+                td San Francisco
+              tr
+                td Dwayne Johnson
+                td 42
+                td Male
+                td Hayward
+          ul
+            li Eggs
+            li Milk
+            ul
+              li Chocolate
+              li Sweets
+
+          blockquote Pray that your loneliness may spur you into finding something to live for, great enough to die for.
+
+          input(type="text", placeholder="Contact us!")
+
+          textarea(placeholder="What's on your mind...")
+
+        .col-6.mhs
+          .column#heading-sizes
+            .row.bl.svs
+              h1.shs Heading 1
+              code.hom 5rem
+            .row.bl.svs
+              h2.shs Heading 2
+              code.hom 4.2rem
+            .row.bl.svs
+              h3.shs Heading 3
+              code.hom 3.6rem
+            .row.bl.svs
+              h4.shs Heading 4
+              code.hom 3.0rem
+            .row.bl.svs
+              h5.shs Heading 5
+              code.hom 2.4rem
+            .row.bl.svs
+              h6.shs Heading 6
+              code.hom 1.5rem
+
+      br
+      br
+      hr
+      .row
+        p elkCSS 1.2.0
+        p.pull-right Created by&nbsp;
+          a(href="https://gitlab.com/cxss") cxss
