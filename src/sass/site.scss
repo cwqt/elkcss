@@ -41,7 +41,7 @@ $breakpoint-mobile:  "only screen and (max-width : 720px)";
   }
 }
 
-a, p a {
+a:not(#dlelk), p a {
   color: grey;
   border-bottom: 1px solid transparent;
   text-decoration: none;
