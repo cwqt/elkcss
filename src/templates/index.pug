@@ -41,7 +41,7 @@ html
         b elkCSS 
         | is a bare bones and simple CSS boilerplate designed for making simple sites rapidly. It does very little to affect the style of elements and instead focuses on give the user a solid grid system to work off to create their designs.
       br
-      p As a result 
+      p As a result, 
         b elk 
         | is well suited for rapid development, small websites (a mere 1.8KiB when gzipped), or those who don't want to hook in large frameworks.
 
@@ -119,8 +119,9 @@ html
       p.svs
         b elk 
         | uses a unique system of removing elements as the screen size gets smaller, a sort of "Mobile Last".
-      p.svs For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also. This way complexity is reduced when moving down in resolution as opposed to introducing it.
-
+      br
+      p For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also. This way complexity is reduced when moving down in resolution as opposed to introducing it.
+      br
       p Consider,
       .mvs
         script(src="https://gitlab.com/snippets/1871647.js")
@@ -134,12 +135,11 @@ html
           b I'm here to stay, forever.
 
       p The first element inside the row will disappear on a Laptop, but it also won't be present on a Mobile either.
-      .row
-        .full
-          p Similarly you can use 
-            code .sod/l/m
-            |  to show elements when the user is on a certain device.
-
+      br
+      p Similarly you can use 
+        code .sod/l/m
+        |  to show elements when the user is on a certain device.
+      br
       p A caveat of this approach is that elements can not specifically be hidden or shown only on one breakpoint. Hide and Show can also not be used on the same element at the same time.
 
       br

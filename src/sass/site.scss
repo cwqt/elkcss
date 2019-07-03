@@ -131,9 +131,10 @@ a:not(#dlelk), p a {
   #elk-logo { 
     flex-flow: column-reverse;
     text-align: center;
+    margin-top: -50px;
     .col-4 {
       margin-top: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
       display: flex;
       justify-content: center; 
       img {
@@ -153,9 +154,12 @@ a:not(#dlelk), p a {
   #docs {
     code {
       width: 100%;
+      margin-right: 0 !important;
+      margin-bottom: 2px;
     }
     p {
       margin-bottom: 1rem !important;
+      width: 100%;
     }
   }
 }
