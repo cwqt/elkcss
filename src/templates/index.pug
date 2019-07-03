@@ -2,13 +2,14 @@ doctype
 html
   head
     title elkCSS | A simple and responsive CSS boilerplate.
+    meta(content="width=device-width, initial-scale=1" name="viewport")
     link(rel="icon" href="/assets/img/elk.svg" sizes="any" type="image/svg+xml")
     link(rel="stylesheet" href="/assets/css/elk.css")
     link(rel="stylesheet" href="/assets/css/site.css")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
   body.hcenter
     .container.lp
-      .lander.row.lp.lvs
+      .lander.row.lp.lvs#elk-logo
         .col-8
           h1#title elkCSS
           h5 A simple and responsive CSS boilerplate.
@@ -34,20 +35,20 @@ html
 
       br
       br
-      h2#intro Intro
+      h3#intro Intro
       hr
       p
-        b elkCSS
+        b elkCSS 
         | is a bare bones and simple CSS boilerplate designed for making simple sites rapidly. It does very little to affect the style of elements and instead focuses on give the user a solid grid system to work off to create their designs.
       br
-      p As a result
-        b elk
+      p As a result 
+        b elk 
         | is well suited for rapid development, small websites (a mere 1.8KiB when gzipped), or those who don't want to hook in large frameworks.
 
       br
       .column
         .col-12
-          h2#responsive-grid Responsive grid
+          h3#responsive-grid Responsive grid
           hr
           p Basic 12 column grid, includes some shorthands such as 
             code half
@@ -95,16 +96,16 @@ html
 
       br
       br
-      h1#mobile-first "Mobile First"
+      h3#mobile-first "Mobile First"
       hr
       p.svs
-        b elk
+        b elk 
         | uses a unique system of removing elements as the screen size gets smaller, a sort of "Mobile Last".
       p.svs For example, hiding an element when on a Laptop resolution will also mean the element is hidden on a Mobile resolution also. This way complexity is reduced when moving down in resolution as opposed to introducing it.
 
       p Consider,
       .mvs
-        script(src="https://gist.github.com/ttxi/ad6737bafd0139a64a8be3222a260126.js")
+        script(src="https://gitlab.com/snippets/1871647.js")
 
       p Which produces,
 
@@ -125,140 +126,140 @@ html
 
       br
       br
-      h1#classes Classes
+      h3#classes Classes
       hr
       #docs
-        .row
+        .row.nr
           code .container
           p Container
 
-        .row
+        .row.nr
           code .row
           p Aligns items in a row
 
-        .row
+        .row.nr
           code .column
           p Aligns content in a column
 
-        .row
+        .row.nr
           code .half
           p Half parent width
 
-        .row
+        .row.nr
           code .third
           p Third parent width
 
-        .row
+        .row.nr
           code .twothirds
           p Two thirds of parent width
 
-        .row
+        .row.nr
           code .col-1...12
           p Child ratio of parent width, in increments of 12th's
 
-        .row
+        .row.nr
           code .hod
           p Hide On Desktop, hides content on desktop resolution
 
-        .row
+        .row.nr
           code .hol
           p Hide On Laptop
 
-        .row
+        .row.nr
           code .hom
           p Hide On Mobile
 
-        .row
+        .row.nr
           code .sod
           p Show On Desktop, show content on desktop resolution
 
-        .row
+        .row.nr
           code .sol
           p Show On Laptop
 
-        .row
+        .row.nr
           code .som
           p Show on Mobile
 
-        .row
+        .row.nr
           code .vcenter
           p Vertically center contents of self
 
-        .row
+        .row.nr
           code .hcenter
           p Horizontally center contents of self
 
-        .row
+        .row.nr
           code .l/m/svs
           p Large/Medium/Small vertical space, applies to top and bottom of self
 
-        .row
+        .row.nr
           code .l/m/shs
           p Large/Medium/Small horizontal space, applies to left and right of self
 
-        .row
+        .row.nr
           code .l/m/sp
           p Large/Medium/Small padding
 
-        .row
+        .row.nr
           code .nm
           p self has No Margin
 
-        .row
+        .row.nr
           code .np
           p self has No Padding
 
-        .row
+        .row.nr
           code .nr
           p self is Not Responsive (will not react to change in screen size)
 
-        .row
+        .row.nr
           code .pull-left
           p Pull self to left of parent
 
-        .row
+        .row.nr
           code .pull-right
           p Pull self to right of parent
 
-        .row
+        .row.nr
           code .b
           p Bold text
 
-        .row
+        .row.nr
           code .i
           p Italic text
 
-        .row
+        .row.nr
           code .u
           p Underline text
 
-        .row
+        .row.nr
           code .lt
           p LineThrough text
 
-        .row
+        .row.nr
           code .bl
           p Use flex baseline to align items to bottom of text
 
-        .row
+        .row.nr
           code .fh
           p Fill Height, (only works in flex-flow: column)
 
-        .row
+        .row.nr
           code .pop-out
           p Allows content to fill full width of container, ignoring the container padding.
 
-        .row
+        .row.nr
           code .aw
           p Auto Width, used on pop-out with col's to fully span container width
 
-        .row
+        .row.nr
           code .ib
           p Inline Block, p and a elements are inline by deult thus their self margins/paddings aren't valid unless inline-block/bloc      k
 
       br
       br
-      h2#exemplar Exemplar
+      h3#exemplar Exemplar
       hr
       p With this simple set of classes you can create complex layouts in a condensed fashion without writing a single line of CSS yourself.
 
@@ -278,10 +279,10 @@ html
             img(src="/assets/img/elk.svg")
           p.block.col-12.sp.nm.fh.vcenter.hcenter Image Caption
 
-      script(src="https://gist.github.com/ttxi/b34ffc0b9c2692de0ae2fd6137a54493.js")
+      script(src="https://gitlab.com/snippets/1871648.js")
 
       br
-      h2#elements Elements
+      h3#elements Elements
       hr
       .row
         .col-6

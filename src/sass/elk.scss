@@ -1,6 +1,6 @@
 $container-width: 80vw;
 $spacing-unit: 2rem;
-$font-size: 1rem;
+$font-size: 1.2rem;
 $ttime: 0.2s;
 
 $breakpoint-desktop: "only screen and (min-width : 1200px)";
@@ -9,8 +9,12 @@ $breakpoint-mobile:  "only screen and (max-width : 720px)";
 
 * { box-sizing: border-box; }
 html {
-  font-size: 16px !important;
+  font-size: 16px;
+  @media #{$breakpoint-mobile} {
+    font-size: 12px;    
+  }
 }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -147,7 +151,7 @@ table {
 }
 
 @media #{$breakpoint-mobile} {
-  .row { flex-wrap: wrap; }
+  .row:not(.nr) { flex-wrap: wrap; }
   .half:not(.nr),
   .third:not(.nr),
   .two-thirds:not(.nr),
