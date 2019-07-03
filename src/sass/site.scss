@@ -124,6 +124,10 @@ a:not(#dlelk), p a {
 }
 
 @media #{$breakpoint-mobile} {
+  .lander {
+    min-height: 100vh !important;
+    justify-content: center;
+  }
   #elk-logo { 
     flex-flow: column-reverse;
     text-align: center;
